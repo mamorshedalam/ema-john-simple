@@ -1,0 +1,42 @@
+.product-item{
+     display: flex;
+     padding: 10px 15px;
+     border-bottom: 2px solid #d3cece;
+}
+.product-img{
+     width: 30%;
+     text-align: center;
+}
+.product-text{
+     padding-left: 15px;
+     width: 70%;
+}
+.product-details{
+     display: flex;
+}
+.product-pricing{
+     width: 50%;
+}
+.product-text h2{
+     color: #4949ee;
+     cursor: pointer;
+     font-size: 24px;
+}
+.product-pricing a{
+     font-size: 16px;
+}
+.product-pricing h6{
+     font-size: 24px;
+     margin: 15px 0;
+}
+.product-pricing button{
+     cursor: pointer;
+     background: gold;
+     border: 0.5px solid #000;
+     border-radius: 5px;
+     padding: 10px 30px;
+}
+.product-star .star{
+     color: gold;
+     
+}
