@@ -3,16 +3,18 @@ import fakeData from '../../fakeData';
 import { getStoredCart, deleteFromDb, clearTheCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import ReviewItem from '../ReviewItem/ReviewItem';
-import happyImage from '../../images/giphy.gif';
+import { useNavigate } from 'react-router-dom';
 
 const Review = () => {
+     const navigate = useNavigate();
      const [cart, setCart] = useState([]);
-     const [orderPlaced, setOrderPlaced] = useState(false);
+     // const [orderPlaced, setOrderPlaced] = useState(false);
 
-     const handlePlaceOrder = () => {
-          setCart([]);
-          setOrderPlaced(true);
-          clearTheCart();
+     const handleProceedCheckout = () => {
+          // setCart([]);
+          // setOrderPlaced(true);
+          // clearTheCart();
+          navigate('/shipment');
      }
 
      const removeProduct = (productKey) => {
@@ -34,10 +36,10 @@ const Review = () => {
           setCart(cartProducts);
      }, []);
 
-     let thankYou;
-     if (orderPlaced) {
-          thankYou = <img src={happyImage} alt="" />
-     }
+     // let thankYou;
+     // if (orderPlaced) {
+     //      thankYou = <img src={happyImage} alt="" />
+     // }
      return (
           <div className="shop-container">
                <div className="product-section">
@@ -45,11 +47,11 @@ const Review = () => {
                     {
                          cart.map(pd => <ReviewItem key={pd.key} product={pd} removeProduct={removeProduct}></ReviewItem>)
                     }
+                    {/* { thankYou } */}
                </div>
-               {thankYou}
                <div className="cart-container">
                     <Cart cart={cart}>
-                         <button onClick={handlePlaceOrder}>Place Order</button>
+                         <button onClick={handleProceedCheckout}>Proceed Checkout</button>
                     </Cart>
                </div>
           </div>

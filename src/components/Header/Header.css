@@ -8,19 +8,33 @@
      background: #000;
      line-height: 30px;
 }
-.nav a{
+.nav a,
+.nav button{
      color: #fff;
+     background: transparent;
      text-decoration: none;
      display: inline-block;
      font-weight: bold;
+     border: none !important;
+     border-radius: 0 !important;
+     line-height: 33px;
      padding: 5px 10px;
      font-size: 18px;
 }
-.nav a:hover{
+.nav a:hover,
+.nav button:hover{
      background: #565656;
      transition: ease-in-out 0.3s;
      -webkit-transition: ease-in-out 0.3s;
      -moz-transition: ease-in-out 0.3s;
      -ms-transition: ease-in-out 0.3s;
      -o-transition: ease-in-out 0.3s;
+}
+.navActive{
+     background-color: #fff !important;
+     color: #000 !important;
+}
+h3{
+     color: #fff;
+     text-align: center;
 }
